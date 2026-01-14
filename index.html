@@ -19,9 +19,9 @@
             </div>
             
             <div class="form-group">
-                <label for="instrument">Instrument:</label>
+                <label for="instrument">Laboratory Service:</label>
                 <select id="instrument" required>
-                    <option value="">Select an instrument</option>
+                    <option value="">Select a service</option>
                 </select>
             </div>
             
@@ -54,6 +54,14 @@
                         <label for="rateDisplay">Rate:</label>
                         <input type="text" id="rateDisplay" readonly value="--">
                     </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea id="comment" rows="3" maxlength="1000" placeholder="Enter any additional notes or comments (optional)"></textarea>
+                <div class="character-count">
+                    <span id="charCount">0</span> / 1000 characters
                 </div>
             </div>
             

@@ -52,13 +52,19 @@ label {
 
 select,
 input[type="number"],
-input[type="text"] {
+input[type="text"],
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
     font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
 }
 
 input[readonly] {
@@ -68,10 +74,24 @@ input[readonly] {
 
 select:focus,
 input[type="number"]:focus,
-input[type="text"]:focus {
+input[type="text"]:focus,
+textarea:focus {
     outline: none;
     border-color: #3498db;
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.character-count {
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    transition: color 0.3s;
+}
+
+.character-count.warning {
+    color: #e74c3c;
+    font-weight: 500;
 }
 
 .quantity-row {
@@ -198,6 +218,21 @@ button:active {
 .item-quantity {
     color: #666;
     font-size: 14px;
+}
+
+.item-comment {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e9ecef;
+    font-size: 14px;
+    color: #555;
+}
+
+.item-comment .item-detail-label {
+    font-weight: 600;
+    color: #555;
+    display: inline-block;
+    min-width: 120px;
 }
 
 .remove-button {

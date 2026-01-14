@@ -280,6 +280,7 @@ function addItem() {
     const customerType = document.getElementById('customerType').value;
     const unitType = document.getElementById('unitType').value;
     const quantity = parseFloat(document.getElementById('quantity').value);
+    const comment = document.getElementById('comment').value.trim();
 
     // Validate all fields
     if (!service || !instrument || !method || !customerType || !unitType || !quantity || quantity <= 0) {
@@ -290,7 +291,7 @@ function addItem() {
     // Find rate
     const rate = findRate(service, instrument, method, customerType, unitType);
     if (rate === null) {
-        alert('No rate found for the selected combination. Please check your data.json file.');
+        alert('No rate found for the selected combination.');
         return;
     }
 
@@ -307,7 +308,8 @@ function addItem() {
         unitType,
         quantity,
         rate,
-        price
+        price,
+        comment: comment || '' // Include comment, empty string if not provided
     };
 
     // Add to items array
@@ -317,12 +319,35 @@ function addItem() {
     renderItems();
     updateTotal();
     updateExportButton();
-    updateExportButton();
 
     // Reset form
     document.getElementById('pricingForm').reset();
-    // Reset dependent dropdowns properly
-    resetDropdown('instrument');
+    
+    // Reset comment character counter
+    const charCountElement = document.getElementById('charCount');
+    if (charCountElement) {
+        charCountElement.textContent = '0';
+        charCountElement.parentElement.classList.remove('warning');
+    }
+    
+    // Reset pane selections
+    const laboratoryItems = document.querySelectorAll('.laboratory-item');
+    laboratoryItems.forEach(item => item.classList.remove('selected'));
+    
+    const instrumentItems = document.querySelectorAll('.instrument-item');
+    instrumentItems.forEach(item => item.classList.remove('selected'));
+    
+    // Hide instrument pane
+    const instrumentPane = document.getElementById('instrumentPane');
+    if (instrumentPane) {
+        instrumentPane.style.display = 'none';
+    }
+    
+    // Reset hidden inputs
+    document.getElementById('service').value = '';
+    document.getElementById('instrument').value = '';
+    
+    // Reset method dropdown
     resetDropdown('method');
     updateRateDisplay(); // Update rate display after reset
 }
@@ -378,6 +403,10 @@ function renderItems() {
                     <div class="item-quantity">
                         Quantity: ${item.quantity} | Rate: $${item.rate.toFixed(2)} per ${unitTypeName.toLowerCase()}
                     </div>
+                    ${item.comment ? `<div class="item-comment">
+                        <span class="item-detail-label">Comment:</span>
+                        <span>${escapeHtml(item.comment)}</span>
+                    </div>` : ''}
                 </div>
                 <div class="item-price">
                     <div class="item-price-value">$${item.price.toFixed(2)}</div>
@@ -386,6 +415,13 @@ function renderItems() {
             </div>
         `;
     }).join('');
+}
+
+// Escape HTML to prevent XSS
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
 // Update total cost
@@ -421,7 +457,8 @@ function exportToCSV() {
         'Unit Type',
         'Quantity',
         'Rate ($)',
-        'Price ($)'
+        'Price ($)',
+        'Comment'
     ];
 
     // Convert items to CSV rows
@@ -440,7 +477,8 @@ function exportToCSV() {
             escapeCSV(unitTypeName),
             item.quantity.toString(),
             item.rate.toFixed(2),
-            item.price.toFixed(2)
+            item.price.toFixed(2),
+            escapeCSV(item.comment || '')
         ];
     });
 
@@ -454,7 +492,8 @@ function exportToCSV() {
         '',
         'Total',
         '',
-        total.toFixed(2)
+        total.toFixed(2),
+        ''
     ]);
 
     // Combine headers and rows
@@ -516,5 +555,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const exportButton = document.getElementById('exportButton');
     if (exportButton) {
         exportButton.addEventListener('click', exportToCSV);
+    }
+
+    // Handle comment character counter
+    const commentField = document.getElementById('comment');
+    const charCountElement = document.getElementById('charCount');
+    if (commentField && charCountElement) {
+        commentField.addEventListener('input', () => {
+            const length = commentField.value.length;
+            charCountElement.textContent = length;
+            
+            // Update styling based on character count
+            if (length > 900) {
+                charCountElement.parentElement.classList.add('warning');
+            } else {
+                charCountElement.parentElement.classList.remove('warning');
+            }
+        });
     }
 });
