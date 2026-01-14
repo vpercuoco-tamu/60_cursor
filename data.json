@@ -1,69 +1,203 @@
 {
   "services": [
-    { "id": "chemistry", "name": "Chemistry" },
-    { "id": "microbiology", "name": "Microbiology" },
-    { "id": "physicalProperties", "name": "Physical Properties" },
-    { "id": "imaging", "name": "Imaging" },
-    { "id": "magnetism", "name": "Magnetism" },
-    { "id": "curation", "name": "Curation" },
-    { "id": "xray", "name": "X-ray" }
+    {
+      "id": "chemistry",
+      "name": "Chemistry"
+    },
+    {
+      "id": "microbiology",
+      "name": "Microbiology"
+    },
+    {
+      "id": "physicalProperties",
+      "name": "Physical Properties"
+    },
+    {
+      "id": "imaging",
+      "name": "Imaging"
+    },
+    {
+      "id": "magnetism",
+      "name": "Magnetism"
+    },
+    {
+      "id": "curation",
+      "name": "Curation"
+    },
+    {
+      "id": "xray",
+      "name": "X-ray"
+    }
   ],
   "instruments": [
-    { "id": "wrmsl", "name": "Whole-Round Multisensor Core Logger (WRMSL)" },
-    { "id": "xscan", "name": "X-ray Linescan Imager (XSCAN)" },
-    { "id": "ngrl", "name": "Natural Gamma Radiation Logger (NGRL)" },
-    { "id": "ctscanner", "name": "X-ray CT Scanner" },
-    { "id": "colorlinescan", "name": "Color Linescan Imager" },
-    { "id": "splitcore", "name": "Split-Core Multisensor Logger" },
-    { "id": "magneticsusceptibility", "name": "Magnetic Susceptibility Logger" },
-    { "id": "pwave", "name": "P-Wave Velocity Logger" },
-    { "id": "density", "name": "Density Logger (Gamma Ray Attenuation)" },
-    { "id": "icpoes", "name": "Inductively Coupled Plasma Optical Emission Spectrometry (ICP-OES)" },
-    { "id": "xrffluorescence", "name": "X-ray Fluorescence (XRF)" },
-    { "id": "carbonsulfur", "name": "Carbon/Sulfur Analyzer" },
-    { "id": "nitrogencarbon", "name": "Nitrogen/Carbon Analyzer" },
-    { "id": "organiccarbon", "name": "Organic Carbon Analyzer" },
-    { "id": "inorganiccarbon", "name": "Inorganic Carbon Analyzer" },
-    { "id": "chntns", "name": "CHNS Elemental Analyzer" },
-    { "id": "uvvis", "name": "UV-Vis Spectrophotometer" },
-    { "id": "ionchromatography", "name": "Ion Chromatography" },
-    { "id": "phmeter", "name": "pH Meter" },
-    { "id": "conductivity", "name": "Conductivity Meter" },
-    { "id": "dissolvedoxygen", "name": "Dissolved Oxygen Analyzer" },
-    { "id": "microscopy", "name": "Optical Microscopy" },
-    { "id": "sem", "name": "Scanning Electron Microscopy (SEM)" },
-    { "id": "fluorescent", "name": "Fluorescent Microscopy" },
-    { "id": "particlesize", "name": "Particle Size Analyzer" },
-    { "id": "porosity", "name": "Porosity/Permeability Analyzer" },
-    { "id": "shearstrength", "name": "Shear Strength Tester" },
-    { "id": "compressibility", "name": "Compressibility Tester" },
-    { "id": "thermal", "name": "Thermal Conductivity Analyzer" },
-    { "id": "moisture", "name": "Moisture Content Analyzer" },
-    { "id": "vane", "name": "Vane Shear Tester" },
-    { "id": "penetrometer", "name": "Penetrometer" },
-    { "id": "magnetic", "name": "Magnetic Property Analyzer" },
-    { "id": "paleomagnetism", "name": "Paleomagnetism System" },
-    { "id": "susceptometer", "name": "Magnetic Susceptometer" },
-    { "id": "remnant", "name": "Remnant Magnetization Analyzer" },
-    { "id": "curation", "name": "Core Curation Services" },
-    { "id": "sampling", "name": "Core Sampling Services" },
-    { "id": "storage", "name": "Core Storage Services" },
-    { "id": "archiving", "name": "Core Archiving Services" },
-    { "id": "cataloging", "name": "Core Cataloging Services" }
+    {
+      "id": "wrmsl",
+      "name": "Whole-Round Multisensor Core Logger (WRMSL)"
+    },
+    {
+      "id": "ngrl",
+      "name": "Natural Gamma Radiation Logger (NGRL)"
+    },
+    {
+      "id": "shil",
+      "name": "Section-half Image Logger (SHIL)"
+    },
+    {
+      "id": "shmsl",
+      "name": "Section-half Magnetic Susceptibility Logger (SHMSL)"
+    },
+    {
+      "id": "hyperscan",
+      "name": "Hyperspectral Logger (HYPERSCAN)"
+    },
+    {
+      "id": "mad",
+      "name": "Moisture and Density (MAD)"
+    },
+    {
+      "id": "pwavebc",
+      "name": "P-wave velocity bayonet and gantry (PWB/PWC)"
+    },
+    {
+      "id": "shear",
+      "name": "Shear Strength, automated vane shear (AVS), Torvane or Pocket Penetrometer"
+    },
+    {
+      "id": "tcon",
+      "name": "Thermal Conductivity Detector (TCON)"
+    },
+    {
+      "id": "xscan",
+      "name": "X-ray Linescan Imager (XSCAN)"
+    },
+
+
+    {
+      "id": "ctscanner",
+      "name": "X-ray CT Scanner"
+    },
+    {
+      "id": "xrf",
+      "name": "X-ray Fluorescence Core Scanner (XRF)"
+    },
+    {
+      "id": "pxrf",
+      "name": "Handheld X-ray Fluorescence analyzer (PXRF)"
+    },
+    {
+      "id": "xrd",
+      "name": "X-ray diffraction (XRD)"
+    },
+
+
+
+    {
+      "id":"srm",
+      "name": "Superconducting Rock Magnetometer (SRM)"
+    },
+    {
+      "id": "pmagdiscrete",
+      "name": "PMAG discrete measurements (JR-6A & Kappabridge)"
+    },
+
+
+    {
+      "id": "icpoes",
+      "name": "Inductively Coupled Plasma Optical Emission Spectrometry (ICP-OES)"
+    },
+
+    {
+      "id": "chns",
+      "name": "CHNS Elemental Analyzer"
+    },
+    {
+      "id": "spec",
+      "name": "UV-Vis Spectrophotometer"
+    },
+    {
+      "id": "ic",
+      "name": "Ion Chromatography"
+    },
+    {
+      "id": "ph",
+      "name": "pH Meter"
+    },
+    {
+      "id": "gc",
+      "name": "Gas Chromatography (GC)"
+    },
+    {
+      "id": "sra",
+      "name": "Source Rock Analyzer (SRA)"
+    },
+
+
+
+    {
+      "id": "microscopy",
+      "name": "Optical Microscopy"
+    },
+    {
+      "id": "sem",
+      "name": "Scanning Electron Microscopy (SEM)"
+    },
+    {
+      "id": "sem-eds",
+      "name": "Scanning Electron Microscopy with Energy Dispersive Spectrometry (SEM-EDS)"
+    },
+
+    {
+      "id": "geodesc",
+      "name": "GEODESC (descriptive data capture)"
+    },
+    {
+      "id": "coresplit",
+      "name": "Core Splitter"
+    },
+    {
+      "id": "allgcr",
+      "name": "All-GCR (general core repository)"
+    }
+
+
   ],
   "methods": [
-    { "id": "standard", "name": "Standard Method" },
-    { "id": "custom", "name": "Custom Method" },
-    { "id": "rapid", "name": "Rapid Analysis" }
+    {
+      "id": "standard",
+      "name": "Standard Method"
+    },
+    {
+      "id": "custom",
+      "name": "Custom Method"
+    },
+    {
+      "id": "rapid",
+      "name": "Rapid Analysis"
+    }
   ],
   "customerTypes": [
-    { "id": "tamusFederal", "name": "TAMUS Internal/Federal User" },
-    { "id": "externalAcademic", "name": "External/Non-Federal Academic User" },
-    { "id": "commercial", "name": "Commercial User" }
+    {
+      "id": "tamusFederal",
+      "name": "TAMUS Internal/Federal User"
+    },
+    {
+      "id": "externalAcademic",
+      "name": "External/Non-Federal Academic User"
+    },
+    {
+      "id": "commercial",
+      "name": "Commercial User"
+    }
   ],
   "unitTypes": [
-    { "id": "timeDays", "name": "Time (days)" },
-    { "id": "samples", "name": "Number of Samples" }
+    {
+      "id": "timeDays",
+      "name": "Time (days)"
+    },
+    {
+      "id": "samples",
+      "name": "Number of Samples"
+    }
   ],
   "rates": [
     {
@@ -72,7 +206,7 @@
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 70.00
+      "rate": 70
     },
     {
       "service": "physicalProperties",
@@ -80,7 +214,7 @@
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 109.00
+      "rate": 109
     },
     {
       "service": "physicalProperties",
@@ -88,7 +222,7 @@
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 678.00
+      "rate": 678
     },
     {
       "service": "physicalProperties",
@@ -96,7 +230,7 @@
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 59.00
+      "rate": 59
     },
     {
       "service": "physicalProperties",
@@ -104,7 +238,7 @@
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 99.00
+      "rate": 99
     },
     {
       "service": "physicalProperties",
@@ -112,127 +246,175 @@
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 657.00
+      "rate": 657
     },
     {
       "service": "physicalProperties",
-      "instrument": "splitcore",
+      "instrument": "shil",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 70.00
+      "rate": 52
     },
     {
       "service": "physicalProperties",
-      "instrument": "splitcore",
+      "instrument": "shil",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 109.00
+      "rate": 91
     },
     {
       "service": "physicalProperties",
-      "instrument": "splitcore",
+      "instrument": "shil",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 678.00
+      "rate": 642
     },
     {
       "service": "physicalProperties",
-      "instrument": "pwave",
+      "instrument": "shmsl",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 70.00
+      "rate": 22
     },
     {
       "service": "physicalProperties",
-      "instrument": "pwave",
+      "instrument": "shmsl",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 109.00
+      "rate": 61
     },
     {
       "service": "physicalProperties",
-      "instrument": "pwave",
+      "instrument": "shmsl",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 678.00
+      "rate": 582
     },
     {
       "service": "physicalProperties",
-      "instrument": "density",
+      "instrument": "hyperscan",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 70.00
+      "rate": 91
     },
     {
       "service": "physicalProperties",
-      "instrument": "density",
+      "instrument": "hyperscan",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 109.00
+      "rate": 130
     },
     {
       "service": "physicalProperties",
-      "instrument": "density",
+      "instrument": "hyperscan",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 678.00
+      "rate": 719
     },
     {
       "service": "physicalProperties",
-      "instrument": "porosity",
+      "instrument": "mad",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 80.00
+      "rate": 40
     },
     {
       "service": "physicalProperties",
-      "instrument": "porosity",
+      "instrument": "mad",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 119.00
+      "rate": 79
     },
     {
       "service": "physicalProperties",
-      "instrument": "porosity",
+      "instrument": "mad",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 688.00
+      "rate": 617
     },
     {
       "service": "physicalProperties",
-      "instrument": "shearstrength",
+      "instrument": "pwavebc",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 75.00
+      "rate": 47
     },
     {
       "service": "physicalProperties",
-      "instrument": "shearstrength",
+      "instrument": "pwavebc",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 114.00
+      "rate": 86
     },
     {
       "service": "physicalProperties",
-      "instrument": "shearstrength",
+      "instrument": "pwavebc",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 683.00
+      "rate": 631
+    },
+    {
+      "service": "physicalProperties",
+      "instrument": "shear",
+      "method": "standard",
+      "customerType": "tamusFederal",
+      "unitType": "timeDays",
+      "rate": 14
+    },
+    {
+      "service": "physicalProperties",
+      "instrument": "shear",
+      "method": "standard",
+      "customerType": "externalAcademic",
+      "unitType": "timeDays",
+      "rate": 53
+    },
+    {
+      "service": "physicalProperties",
+      "instrument": "shear",
+      "method": "standard",
+      "customerType": "commercial",
+      "unitType": "timeDays",
+      "rate": 556
+    },
+    {
+      "service": "physicalProperties",
+      "instrument": "tcon",
+      "method": "standard",
+      "customerType": "tamusFederal",
+      "unitType": "timeDays",
+      "rate": 15
+    },
+    {
+      "service": "physicalProperties",
+      "instrument": "tcon",
+      "method": "standard",
+      "customerType": "externalAcademic",
+      "unitType": "timeDays",
+      "rate": 55
+    },
+    {
+      "service": "physicalProperties",
+      "instrument": "tcon",
+      "method": "standard",
+      "customerType": "commercial",
+      "unitType": "timeDays",
+      "rate": 569
     },
     {
       "service": "xray",
@@ -240,7 +422,7 @@
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 129.00
+      "rate": 129
     },
     {
       "service": "xray",
@@ -248,7 +430,7 @@
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 168.00
+      "rate": 168
     },
     {
       "service": "xray",
@@ -256,7 +438,7 @@
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 795.00
+      "rate": 795
     },
     {
       "service": "xray",
@@ -264,7 +446,7 @@
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 150.00
+      "rate": 150
     },
     {
       "service": "xray",
@@ -272,7 +454,7 @@
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 189.00
+      "rate": 189
     },
     {
       "service": "xray",
@@ -280,79 +462,103 @@
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 816.00
+      "rate": 816
     },
     {
       "service": "xray",
-      "instrument": "xrffluorescence",
+      "instrument": "xrf",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 140.00
+      "rate": 105
     },
     {
       "service": "xray",
-      "instrument": "xrffluorescence",
+      "instrument": "xrf",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 179.00
+      "rate": 128
     },
     {
       "service": "xray",
-      "instrument": "xrffluorescence",
+      "instrument": "xrf",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 806.00
+      "rate": 732
     },
     {
-      "service": "imaging",
-      "instrument": "colorlinescan",
+      "service": "xray",
+      "instrument": "pxrf",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 120.00
+      "rate": 24
     },
     {
-      "service": "imaging",
-      "instrument": "colorlinescan",
+      "service": "xray",
+      "instrument": "pxrf",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 159.00
+      "rate": 47
     },
     {
-      "service": "imaging",
-      "instrument": "colorlinescan",
+      "service": "xray",
+      "instrument": "pxrf",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 786.00
+      "rate": 569
     },
     {
-      "service": "imaging",
-      "instrument": "microscopy",
+      "service": "xray",
+      "instrument": "xrd",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 100.00
+      "rate": 79
     },
     {
-      "service": "imaging",
-      "instrument": "microscopy",
+      "service": "xray",
+      "instrument": "xrd",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 139.00
+      "rate": 119
     },
     {
-      "service": "imaging",
-      "instrument": "microscopy",
+      "service": "xray",
+      "instrument": "xrd",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 766.00
+      "rate": 697
+    },
+    {
+      "service": "imaging",
+      "instrument": "microscopes",
+      "method": "standard",
+      "customerType": "tamusFederal",
+      "unitType": "timeDays",
+      "rate": 56
+    },
+    {
+      "service": "imaging",
+      "instrument": "microscopes",
+      "method": "standard",
+      "customerType": "externalAcademic",
+      "unitType": "timeDays",
+      "rate": 95
+    },
+    {
+      "service": "imaging",
+      "instrument": "microscopes",
+      "method": "standard",
+      "customerType": "commercial",
+      "unitType": "timeDays",
+      "rate": 649
     },
     {
       "service": "imaging",
@@ -360,7 +566,7 @@
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 180.00
+      "rate": 43
     },
     {
       "service": "imaging",
@@ -368,7 +574,7 @@
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 219.00
+      "rate": 82
     },
     {
       "service": "imaging",
@@ -376,103 +582,79 @@
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 846.00
+      "rate": 623
     },
     {
-      "service": "magnetism",
-      "instrument": "magneticsusceptibility",
+      "service": "imaging",
+      "instrument": "sem-eds",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 70.00
+      "rate": 79
     },
     {
-      "service": "magnetism",
-      "instrument": "magneticsusceptibility",
+      "service": "imaging",
+      "instrument": "sem-eds",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 109.00
+      "rate": 119
     },
     {
-      "service": "magnetism",
-      "instrument": "magneticsusceptibility",
+      "service": "imaging",
+      "instrument": "sem-eds",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 678.00
+      "rate": 697
     },
     {
       "service": "magnetism",
-      "instrument": "paleomagnetism",
+      "instrument": "srm",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 85.00
+      "rate": 119
     },
     {
       "service": "magnetism",
-      "instrument": "paleomagnetism",
+      "instrument": "srm",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 124.00
+      "rate": 158
     },
     {
       "service": "magnetism",
-      "instrument": "paleomagnetism",
+      "instrument": "srm",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 693.00
+      "rate": 775
     },
     {
       "service": "magnetism",
-      "instrument": "susceptometer",
+      "instrument": "pmagdiscrete",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 75.00
+      "rate": 47
     },
     {
       "service": "magnetism",
-      "instrument": "susceptometer",
+      "instrument": "pmagdiscrete",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 114.00
+      "rate": 86
     },
     {
       "service": "magnetism",
-      "instrument": "susceptometer",
+      "instrument": "pmagdiscrete",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 683.00
-    },
-    {
-      "service": "chemistry",
-      "instrument": "icpms",
-      "method": "standard",
-      "customerType": "tamusFederal",
-      "unitType": "timeDays",
-      "rate": 200.00
-    },
-    {
-      "service": "chemistry",
-      "instrument": "icpms",
-      "method": "standard",
-      "customerType": "externalAcademic",
-      "unitType": "timeDays",
-      "rate": 239.00
-    },
-    {
-      "service": "chemistry",
-      "instrument": "icpms",
-      "method": "standard",
-      "customerType": "commercial",
-      "unitType": "timeDays",
-      "rate": 866.00
+      "rate": 631
     },
     {
       "service": "chemistry",
@@ -480,7 +662,7 @@
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 180.00
+      "rate": 109
     },
     {
       "service": "chemistry",
@@ -488,7 +670,7 @@
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 219.00
+      "rate": 148
     },
     {
       "service": "chemistry",
@@ -496,391 +678,223 @@
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 846.00
+      "rate": 756
     },
     {
       "service": "chemistry",
-      "instrument": "carbonsulfur",
+      "instrument": "chns",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 110.00
+      "rate": 31
     },
     {
       "service": "chemistry",
-      "instrument": "carbonsulfur",
+      "instrument": "chns",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 149.00
+      "rate": 70
     },
     {
       "service": "chemistry",
-      "instrument": "carbonsulfur",
+      "instrument": "chns",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 776.00
+      "rate": 600
     },
     {
       "service": "chemistry",
-      "instrument": "nitrogencarbon",
+      "instrument": "coul",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 115.00
+      "rate": 25
     },
     {
       "service": "chemistry",
-      "instrument": "nitrogencarbon",
+      "instrument": "coul",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 154.00
+      "rate": 64
     },
     {
       "service": "chemistry",
-      "instrument": "nitrogencarbon",
+      "instrument": "coul",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 781.00
+      "rate": 588
     },
     {
       "service": "chemistry",
-      "instrument": "organiccarbon",
+      "instrument": "ic",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 105.00
+      "rate": 6
     },
     {
       "service": "chemistry",
-      "instrument": "organiccarbon",
+      "instrument": "ic",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 144.00
+      "rate": 99
     },
     {
       "service": "chemistry",
-      "instrument": "organiccarbon",
+      "instrument": "ic",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 771.00
+      "rate": 658
     },
     {
       "service": "chemistry",
-      "instrument": "inorganiccarbon",
+      "instrument": "spec",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 105.00
+      "rate": 38
     },
     {
       "service": "chemistry",
-      "instrument": "inorganiccarbon",
+      "instrument": "spec",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 144.00
+      "rate": 77
     },
     {
       "service": "chemistry",
-      "instrument": "inorganiccarbon",
+      "instrument": "spec",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 771.00
+      "rate": 613
     },
     {
       "service": "chemistry",
-      "instrument": "hplc",
+      "instrument": "gc",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 160.00
+      "rate": 45
     },
     {
       "service": "chemistry",
-      "instrument": "hplc",
+      "instrument": "gc",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 199.00
+      "rate": 84
     },
     {
       "service": "chemistry",
-      "instrument": "hplc",
+      "instrument": "gc",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 826.00
+      "rate": 628
     },
     {
       "service": "chemistry",
-      "instrument": "gcms",
+      "instrument": "sra",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 170.00
+      "rate": 29
     },
     {
       "service": "chemistry",
-      "instrument": "gcms",
+      "instrument": "sra",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 209.00
+      "rate": 68
     },
     {
       "service": "chemistry",
-      "instrument": "gcms",
+      "instrument": "sra",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 836.00
-    },
-    {
-      "service": "chemistry",
-      "instrument": "ftir",
-      "method": "standard",
-      "customerType": "tamusFederal",
-      "unitType": "timeDays",
-      "rate": 130.00
-    },
-    {
-      "service": "chemistry",
-      "instrument": "ftir",
-      "method": "standard",
-      "customerType": "externalAcademic",
-      "unitType": "timeDays",
-      "rate": 169.00
-    },
-    {
-      "service": "chemistry",
-      "instrument": "ftir",
-      "method": "standard",
-      "customerType": "commercial",
-      "unitType": "timeDays",
-      "rate": 796.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "bacterialculture",
-      "method": "standard",
-      "customerType": "tamusFederal",
-      "unitType": "timeDays",
-      "rate": 90.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "bacterialculture",
-      "method": "standard",
-      "customerType": "externalAcademic",
-      "unitType": "timeDays",
-      "rate": 129.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "bacterialculture",
-      "method": "standard",
-      "customerType": "commercial",
-      "unitType": "timeDays",
-      "rate": 756.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "pcr",
-      "method": "standard",
-      "customerType": "tamusFederal",
-      "unitType": "timeDays",
-      "rate": 150.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "pcr",
-      "method": "standard",
-      "customerType": "externalAcademic",
-      "unitType": "timeDays",
-      "rate": 189.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "pcr",
-      "method": "standard",
-      "customerType": "commercial",
-      "unitType": "timeDays",
-      "rate": 816.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "sequencing",
-      "method": "standard",
-      "customerType": "tamusFederal",
-      "unitType": "timeDays",
-      "rate": 200.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "sequencing",
-      "method": "standard",
-      "customerType": "externalAcademic",
-      "unitType": "timeDays",
-      "rate": 239.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "sequencing",
-      "method": "standard",
-      "customerType": "commercial",
-      "unitType": "timeDays",
-      "rate": 866.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "flowcytometry",
-      "method": "standard",
-      "customerType": "tamusFederal",
-      "unitType": "timeDays",
-      "rate": 140.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "flowcytometry",
-      "method": "standard",
-      "customerType": "externalAcademic",
-      "unitType": "timeDays",
-      "rate": 179.00
-    },
-    {
-      "service": "microbiology",
-      "instrument": "flowcytometry",
-      "method": "standard",
-      "customerType": "commercial",
-      "unitType": "timeDays",
-      "rate": 806.00
+      "rate": 596
     },
     {
       "service": "curation",
-      "instrument": "curation",
+      "instrument": "geodesc",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 50.00
+      "rate": 14
     },
     {
       "service": "curation",
-      "instrument": "curation",
+      "instrument": "geodesc",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 89.00
+      "rate": 53
     },
     {
       "service": "curation",
-      "instrument": "curation",
+      "instrument": "geodesc",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 716.00
+      "rate": 566
     },
     {
       "service": "curation",
-      "instrument": "sampling",
+      "instrument": "coresplit",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 60.00
+      "rate": 28
     },
     {
       "service": "curation",
-      "instrument": "sampling",
+      "instrument": "coresplit",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 99.00
+      "rate": 67
     },
     {
       "service": "curation",
-      "instrument": "sampling",
+      "instrument": "coresplit",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 726.00
+      "rate": 594
     },
     {
       "service": "curation",
-      "instrument": "storage",
+      "instrument": "allgcr",
       "method": "standard",
       "customerType": "tamusFederal",
       "unitType": "timeDays",
-      "rate": 40.00
+      "rate": 997
     },
     {
       "service": "curation",
-      "instrument": "storage",
+      "instrument": "allgcr",
       "method": "standard",
       "customerType": "externalAcademic",
       "unitType": "timeDays",
-      "rate": 79.00
+      "rate": 1473
     },
     {
       "service": "curation",
-      "instrument": "storage",
+      "instrument": "allgcr",
       "method": "standard",
       "customerType": "commercial",
       "unitType": "timeDays",
-      "rate": 706.00
-    },
-    {
-      "service": "curation",
-      "instrument": "archiving",
-      "method": "standard",
-      "customerType": "tamusFederal",
-      "unitType": "timeDays",
-      "rate": 45.00
-    },
-    {
-      "service": "curation",
-      "instrument": "archiving",
-      "method": "standard",
-      "customerType": "externalAcademic",
-      "unitType": "timeDays",
-      "rate": 84.00
-    },
-    {
-      "service": "curation",
-      "instrument": "archiving",
-      "method": "standard",
-      "customerType": "commercial",
-      "unitType": "timeDays",
-      "rate": 711.00
-    },
-    {
-      "service": "curation",
-      "instrument": "cataloging",
-      "method": "standard",
-      "customerType": "tamusFederal",
-      "unitType": "timeDays",
-      "rate": 55.00
-    },
-    {
-      "service": "curation",
-      "instrument": "cataloging",
-      "method": "standard",
-      "customerType": "externalAcademic",
-      "unitType": "timeDays",
-      "rate": 94.00
-    },
-    {
-      "service": "curation",
-      "instrument": "cataloging",
-      "method": "standard",
-      "customerType": "commercial",
-      "unitType": "timeDays",
-      "rate": 721.00
+      "rate": 8951
     }
   ]
 }

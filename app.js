@@ -2,14 +2,73 @@
 let pricingData = null;
 let items = [];
 
-// Load data from JSON file
+// Parse CSV text into array of objects
+function parseCSV(csvText) {
+    const lines = csvText.trim().split('\n');
+    if (lines.length < 2) return [];
+    
+    // Simple CSV parser - handles basic cases (no quoted fields with commas)
+    const headers = lines[0].split(',').map(h => h.trim());
+    const rows = [];
+    
+    for (let i = 1; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue; // Skip empty lines
+        
+        const values = line.split(',').map(v => v.trim());
+        if (values.length === headers.length) {
+            const row = {};
+            headers.forEach((header, index) => {
+                row[header] = values[index];
+            });
+            rows.push(row);
+        }
+    }
+    
+    return rows;
+}
+
+// Load rates from CSV and merge into data.json
 async function loadData() {
     try {
-        const response = await fetch('data.json');
+        // First, load rates.csv
+        let rates = [];
+        try {
+            const ratesResponse = await fetch('rates.csv', { cache: 'no-store' });
+            if (ratesResponse.ok) {
+                const csvText = await ratesResponse.text();
+                const csvRows = parseCSV(csvText);
+                // Convert CSV rows to rate objects with proper types
+                rates = csvRows.map(row => ({
+                    service: row.service,
+                    instrument: row.instrument,
+                    method: row.method,
+                    customerType: row.customerType,
+                    unitType: row.unitType,
+                    rate: parseFloat(row.rate) || 0
+                }));
+                console.log(`Loaded ${rates.length} rates from rates.csv`);
+            } else {
+                console.warn('rates.csv not found, using rates from data.json');
+            }
+        } catch (csvError) {
+            console.warn('Error loading rates.csv:', csvError);
+            console.warn('Falling back to rates from data.json');
+        }
+        
+        // Load data.json
+        const response = await fetch('data.json', { cache: 'no-store' });
         if (!response.ok) {
             throw new Error(`Failed to load data.json: ${response.status} ${response.statusText}`);
         }
         pricingData = await response.json();
+        
+        // If we loaded rates from CSV, replace the rates in data.json
+        if (rates.length > 0) {
+            pricingData.rates = rates;
+            console.log('Updated data.json rates from rates.csv');
+        }
+        
         populateDropdowns();
     } catch (error) {
         console.error('Error loading data:', error);
