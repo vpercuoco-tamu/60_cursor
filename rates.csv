@@ -65,7 +65,7 @@ chemistry,chns,standard,commercial,timeDays,600
 chemistry,coul,standard,tamusFederal,timeDays,25
 chemistry,coul,standard,externalAcademic,timeDays,64
 chemistry,coul,standard,commercial,timeDays,588
-chemistry,ic,standard,tamusFederal,timeDays,6
+chemistry,ic,standard,tamusFederal,timeDays,60
 chemistry,ic,standard,externalAcademic,timeDays,99
 chemistry,ic,standard,commercial,timeDays,658
 chemistry,spec,standard,tamusFederal,timeDays,38

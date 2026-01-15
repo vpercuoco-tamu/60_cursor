@@ -405,7 +405,7 @@ function renderItems() {
                     </div>
                     ${item.comment ? `<div class="item-comment">
                         <span class="item-detail-label">Comment:</span>
-                        <span>${escapeHtml(item.comment)}</span>
+                        <span class="comment-text">${escapeHtml(item.comment)}</span>
                     </div>` : ''}
                 </div>
                 <div class="item-price">
